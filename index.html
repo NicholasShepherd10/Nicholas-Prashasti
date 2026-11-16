@@ -97,7 +97,10 @@
   .shloka-panel{position:relative;padding:16px 22px;border-radius:16px;background:linear-gradient(180deg,rgba(122,30,43,.5),rgba(30,8,10,.6));border:1px solid rgba(201,163,78,.4)}
   #inviteLabel{background:rgba(58,11,18,.45);padding:3px 12px;border-radius:999px;display:inline-block}
   #ceremony-section{padding-top:2rem;padding-bottom:1.75rem} @media(min-width:640px){#ceremony-section{padding-top:5rem;padding-bottom:5rem}}
+  /* ===== FOOTER : 3 lines ===== */
   #footerLine{font-size:clamp(1.1rem,3vw,1.5rem);display:inline-block}
+  .footer-small{font-family:Mukta,sans-serif;font-size:clamp(.8rem,2.2vw,.95rem);letter-spacing:2px;text-transform:uppercase;opacity:.7;display:block}
+  .footer-family{font-family:'Yatra One',cursive;font-size:clamp(1.5rem,4.5vw,2.2rem);line-height:1.3;display:block}
   .scroll-hint{position:fixed;left:50%;bottom:calc(6px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:50;display:flex;flex-direction:column;align-items:center;padding:6px 18px 0;background:none;border:0;cursor:pointer;pointer-events:none;opacity:0;transition:opacity .5s ease;color:#E8961F}
   .scroll-hint.show{opacity:1;pointer-events:auto} .scroll-hint-label{font-size:11px;font-weight:600;margin-bottom:1px}
   .scroll-hint svg{display:block;width:22px;height:22px;animation:hintBounce 1.6s ease-in-out infinite} .scroll-hint svg+svg{margin-top:-12px;animation-delay:.2s}
@@ -116,11 +119,11 @@
   .cd-label{display:block;margin-top:4px;font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:#F6EEDD;opacity:.9}
   .cd-title{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#F0D896;margin-bottom:8px;text-align:center}
   #mainCountdownWrap{width:min(92vw,360px);margin:0 auto}
-  .event-countdown{display:flex;gap:6px;margin-top:14px;flex-wrap:nowrap}
-  .event-countdown .cd-box{min-width:0;flex:1 1 0;padding:7px 2px 6px;background:rgba(0,0,0,.38);border-color:rgba(240,216,150,.45)}
+  .event-countdown{display:flex;gap:8px;margin-top:20px;flex-wrap:nowrap}
+  .event-countdown .cd-box{min-width:0;flex:1 1 0;padding:10px 2px 9px;background:rgba(0,0,0,.38);border-color:rgba(240,216,150,.45)}
   .event-countdown .cd-num{font-size:18px}
   .event-countdown .cd-label{font-size:8px;letter-spacing:1.2px}
-  .event-countdown-title{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:#F0D896;margin:14px 0 6px;text-align:left;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+  .event-countdown-title{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:#F0D896;margin:20px 0 8px;text-align:left;text-shadow:0 1px 6px rgba(0,0,0,.6)}
   @media(max-width:380px){ .cd-box{min-width:56px;padding:7px 4px 6px} .cd-num{font-size:20px} .event-countdown .cd-num{font-size:16px} }
 
   /* ===== HERO : SHLOKA CENTRE + INVITATION RIGHT ALIGNED ===== */
@@ -182,20 +185,54 @@
     #blessingsLine{max-width:380px}
   }
 
-  /* ===== EVENT BOXES — NO SCROLLER, STACK ON PAGE SCROLL ===== */
-  .event-stack{display:flex;flex-direction:column;gap:20px;width:100%;max-width:32rem;margin-left:auto;margin-right:auto;overflow:visible!important;max-height:none!important;height:auto!important;touch-action:auto;overscroll-behavior:auto;scroll-snap-type:none!important;padding:0}
-  .event-card{position:relative;overflow:hidden;border-radius:18px;min-height:300px;display:flex;align-items:flex-end;text-align:left;color:#fff;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;box-shadow:0 18px 40px rgba(58,11,18,.22);border:1px solid rgba(201,163,78,.5);flex:none;width:100%}
+  /* ===== EVENT BOXES — ROOMY / BREATHING SPACE — NO SCROLLER, STACK ON PAGE SCROLL ===== */
+  #ceremony-section{padding-top:3.5rem!important;padding-bottom:3.5rem!important}
+  .event-stack{display:flex;flex-direction:column;gap:36px!important;width:100%;max-width:32rem;margin-left:auto;margin-right:auto;overflow:visible!important;max-height:none!important;height:auto!important;touch-action:auto;overscroll-behavior:auto;scroll-snap-type:none!important;padding:6px 2px 12px}
+  .event-card{position:relative;overflow:hidden;border-radius:22px;min-height:400px;display:flex;align-items:flex-end;text-align:left;color:#fff;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;box-shadow:0 22px 48px rgba(58,11,18,.28);border:1px solid rgba(201,163,78,.5);flex:none;width:100%}
   .event-card::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.18) 35%,rgba(58,11,18,.88) 78%,rgba(30,8,10,.96) 100%);z-index:1}
-  .event-card-inner{position:relative;z-index:2;width:100%;padding:22px}
-  .event-emoji{font-size:52px;line-height:1;filter:drop-shadow(0 6px 14px rgba(0,0,0,.45))}
-  .event-card .event-pill{display:inline-block;background:rgba(255,255,255,.92);color:#7A1E2B;font-size:11px;font-weight:700;letter-spacing:2px;padding:5px 12px;border-radius:999px}
-  .event-card h3{font-family:'Yatra One',cursive;font-size:28px;line-height:1.15;margin:10px 0 4px;text-shadow:0 2px 10px rgba(0,0,0,.6)}
-  .event-card .event-meta{font-size:14px;line-height:1.5;color:#F6EEDD;text-shadow:0 1px 6px rgba(0,0,0,.6)}
-  .event-card .event-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-  .event-card .event-actions a{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;padding:12px 16px;border-radius:999px;text-decoration:none;min-height:44px}
+  .event-card-inner{position:relative;z-index:2;width:100%;padding:32px 28px 30px;display:flex;flex-direction:column;gap:0}
+  .event-emoji{font-size:52px;line-height:1;margin:16px 0 0;filter:drop-shadow(0 6px 14px rgba(0,0,0,.45))}
+  .event-card .event-pill{display:inline-block;align-self:flex-start;background:rgba(255,255,255,.92);color:#7A1E2B;font-size:11px;font-weight:700;letter-spacing:2px;padding:7px 14px;border-radius:999px;margin-bottom:2px}
+  .event-card h3{font-family:'Yatra One',cursive;font-size:30px;line-height:1.2;margin:14px 0 10px;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+  .event-card .event-meta{font-size:15px;line-height:1.85;color:#F6EEDD;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+  .event-card .event-meta .event-date-line{display:block;margin-bottom:6px}
+  .event-card .event-meta .event-venue-line{display:block;margin-bottom:6px}
+  .event-card .event-meta .event-address-line{display:block;font-size:13px;line-height:1.65;opacity:.85}
+  .event-divider{width:56px;height:2px;background:rgba(244,185,77,.85);border-radius:2px;margin:18px 0 2px}
+  .event-card .event-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .event-card .event-actions a{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;padding:14px 20px;border-radius:999px;text-decoration:none;min-height:48px}
   .event-card .btn-white{background:#fff;color:#7A1E2B}
   .event-card .btn-gold{background:#E8961F;color:#3A0B12}
-  @media(max-width:640px){.event-card{min-height:280px}.event-card h3{font-size:24px}.event-card-inner{padding:18px}}
+  @media(max-width:640px){
+    #ceremony-section{padding-top:2.75rem!important;padding-bottom:2.75rem!important}
+    .event-stack{gap:30px!important;padding:4px 2px 10px}
+    .event-card{min-height:360px;border-radius:20px}
+    .event-card-inner{padding:28px 22px 26px}
+    .event-card h3{font-size:26px;margin:12px 0 9px}
+    .event-card .event-meta{font-size:14px;line-height:1.8}
+    .event-divider{margin:16px 0 2px}
+    .event-card .event-actions{margin-top:20px;gap:10px}
+    .event-card .event-actions a{padding:13px 18px}
+  }
+  @media(max-width:380px){
+    .event-stack{gap:26px!important}
+    .event-card-inner{padding:26px 20px 24px}
+    .event-card .event-actions a{width:100%;justify-content:center}
+  }
+
+  /* ===== HOW TO REACH — MAP ON TOP OF EACH BOX ===== */
+  .venue-grid{display:grid;grid-template-columns:1fr;gap:22px;width:100%;max-width:48rem;margin:0 auto 22px}
+  @media(min-width:640px){ .venue-grid{grid-template-columns:1fr 1fr;gap:20px} }
+  .venue-card{position:relative;background:#fff;border:1px solid rgba(201,163,78,.45);border-radius:18px;overflow:hidden;box-shadow:0 18px 40px rgba(58,11,18,.14);text-align:left;display:flex;flex-direction:column}
+  .venue-map{position:relative;width:100%;height:190px;background:#F6EEDD;overflow:hidden;flex:none}
+  .venue-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(1.05)}
+  .venue-map-badge{position:absolute;left:12px;bottom:12px;z-index:2;background:rgba(58,11,18,.88);color:#F0D896;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 12px;border-radius:999px;pointer-events:none}
+  .venue-body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:0;flex:1}
+  .venue-body h3{font-family:'Yatra One',cursive;font-size:22px;line-height:1.25;color:#7A1E2B;margin:8px 0 8px}
+  .venue-body .venue-date{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#E8961F;font-weight:700}
+  .venue-body .venue-addr{font-size:14px;line-height:1.7;color:rgba(42,24,16,.72);margin-bottom:16px}
+  .venue-body .venue-actions{margin-top:auto}
+  @media(max-width:640px){ .venue-map{height:180px} .venue-body{padding:18px 18px 20px} }
 
   /* ===== BLESSING WALL — HORIZONTAL / SIDE SCROLLER ONLY ===== */
   .blessing-wall-scroll{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;touch-action:pan-x;overscroll-behavior-x:contain;scroll-behavior:smooth;scroll-snap-type:x mandatory;display:flex;gap:14px;padding:10px 6px 16px 6px;position:relative;z-index:10;scrollbar-width:thin;scrollbar-color:#C9A34E rgba(255,255,255,.15)}
@@ -222,7 +259,7 @@
 </head>
 <body class="bg-cream text-ink font-body">
 <script id="wedding-config" type="application/json">
-{"couple":{"brideName":"Prashasti Yadav","groomName":"Nicholas Shepherd","coupleShort":"Prashasti weds Nicholas"},"hosts":{"blessingsLine":"With the blessings of our parents and entire family","invitationNote":"Warmly Invited"},"event":{"titleHindi":"Shubh Vivah","titleEnglish":"SHUBH VIVAH","dateDisplay":"19 December 2026, Saturday","dateRange":"17 - 19 December 2026","cityLine":"New Delhi"},"venues":{"bellanta":{"name":"Bellanta Hotel","address":"Rajokri, NH8, Delhi-Gurugram Expy Service Lane, Rajokri Flyover, New Delhi, Delhi 110038","mapLink":"https://maps.app.goo.gl/sJS9PV15kEZDhuyBA","mapQuery":"Bellanta Hotel Rajokri New Delhi"},"belLaMonde":{"name":"Bel-La Monde Hotel","address":"NH8, Gurgaon - Delhi Expy, Near Shiv Murti, Avenue Bouganvillea, Rangpuri, New Delhi, Delhi 110038","mapLink":"https://maps.app.goo.gl/5G331Tz8LgwBUaPx8","mapQuery":"Bel-La Monde Hotel Rangpuri New Delhi"}},"venue":{"name":"Bel-La Monde Hotel","city":"NH8, Gurgaon - Delhi Expy, Near Shiv Murti, Avenue Bouganvillea, Rangpuri, New Delhi, Delhi 110038","mapQuery":"Bel-La Monde Hotel Rangpuri New Delhi","mapLink":"https://maps.app.goo.gl/5G331Tz8LgwBUaPx8"},"schedule":{"events":[{"title":"Haldi Ceremony","titleEnglish":"HALDI CEREMONY","dateDisplay":"18 December 2026, Friday","dateISO":"2026-12-18T11:00:00+05:30","timeDisplay":"11:00 AM","venueLine":"Bellanta Hotel, Rajokri, New Delhi","venue":"Bellanta Hotel","mapLink":"https://maps.app.goo.gl/sJS9PV15kEZDhuyBA","emoji":"💛","toon":"https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop"},{"title":"Mehandi Ceremony","titleEnglish":"MEHANDI CEREMONY","dateDisplay":"18 December 2026, Friday","dateISO":"2026-12-18T18:00:00+05:30","timeDisplay":"6:00 PM","venueLine":"Bellanta Hotel, Rajokri, New Delhi","venue":"Bellanta Hotel","mapLink":"https://maps.app.goo.gl/sJS9PV15kEZDhuyBA","emoji":"🌿","toon":"https://images.unsplash.com/photo-1610173826608-bd1f53a52db1?q=80&w=1200&auto=format&fit=crop"},{"title":"Wedding Ceremony","titleEnglish":"WEDDING CEREMONY","dateDisplay":"19 December 2026, Saturday","dateISO":"2026-12-19T19:00:00+05:30","timeDisplay":"7:00 PM","venueLine":"Bel-La Monde Hotel, Rangpuri, New Delhi","venue":"Bel-La Monde Hotel","mapLink":"https://maps.app.goo.gl/5G331Tz8LgwBUaPx8","emoji":"💍","toon":"https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop"}]},"media":{"introImage":"https://thesurajdev.github.io/wedding-invite/image1.jpg","heroVideoDesktop":"https://thesurajdev.github.io/wedding-invite/desktop_arti.webm","heroVideoMobile":"https://thesurajdev.github.io/wedding-invite/mobile_arti.webm","bgMusicPrimary":"https://thesurajdev.github.io/wedding-invite/ganesh_mantra.mp3","bgMusicSecondary":"https://thesurajdev.github.io/wedding-invite/wedding_song.mp3"},"footer":{"line":"Your presence is our biggest blessing"}}
+{"couple":{"brideName":"Prashasti Yadav","groomName":"Nicholas Shepherd","coupleShort":"Prashasti Weds Nicholas"},"hosts":{"blessingsLine":"With the blessings of our parents and entire family","invitationNote":"Warmly Invited"},"event":{"titleHindi":"Shubh Vivah","titleEnglish":"SHUBH VIVAH","dateDisplay":"19 December 2026, Saturday","dateRange":"17 - 19 December 2026","cityLine":"New Delhi"},"venues":{"bellanta":{"name":"Bellanta Hotel","address":"Rajokri, NH8, Delhi-Gurugram Expy Service Lane, Rajokri Flyover, New Delhi, Delhi 110038","mapLink":"https://maps.app.goo.gl/sJS9PV15kEZDhuyBA","mapQuery":"Bellanta Hotel Rajokri New Delhi"},"belLaMonde":{"name":"Bel-La Monde Hotel","address":"NH8, Gurgaon - Delhi Expy, Near Shiv Murti, Avenue Bouganvillea, Rangpuri, New Delhi, Delhi 110038","mapLink":"https://maps.app.goo.gl/5G331Tz8LgwBUaPx8","mapQuery":"Bel-La Monde Hotel Rangpuri New Delhi"}},"venue":{"name":"Bel-La Monde Hotel","city":"NH8, Gurgaon - Delhi Expy, Near Shiv Murti, Avenue Bouganvillea, Rangpuri, New Delhi, Delhi 110038","mapQuery":"Bel-La Monde Hotel Rangpuri New Delhi","mapLink":"https://maps.app.goo.gl/5G331Tz8LgwBUaPx8"},"schedule":{"events":[{"title":"Haldi Ceremony","titleEnglish":"HALDI CEREMONY","dateDisplay":"18 December 2026, Friday","dateISO":"2026-12-18T11:00:00+05:30","timeDisplay":"11:00 AM","venueLine":"Bellanta Hotel, Rajokri, New Delhi","venue":"Bellanta Hotel","mapLink":"https://maps.app.goo.gl/sJS9PV15kEZDhuyBA","emoji":"💛","toon":"https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop"},{"title":"Mehandi Ceremony","titleEnglish":"MEHANDI CEREMONY","dateDisplay":"18 December 2026, Friday","dateISO":"2026-12-18T18:00:00+05:30","timeDisplay":"6:00 PM","venueLine":"Bellanta Hotel, Rajokri, New Delhi","venue":"Bellanta Hotel","mapLink":"https://maps.app.goo.gl/sJS9PV15kEZDhuyBA","emoji":"🌿","toon":"https://images.unsplash.com/photo-1610173826608-bd1f53a52db1?q=80&w=1200&auto=format&fit=crop"},{"title":"Wedding Ceremony","titleEnglish":"WEDDING CEREMONY","dateDisplay":"19 December 2026, Saturday","dateISO":"2026-12-19T19:00:00+05:30","timeDisplay":"7:00 PM","venueLine":"Bel-La Monde Hotel, Rangpuri, New Delhi","venue":"Bel-La Monde Hotel","mapLink":"https://maps.app.goo.gl/5G331Tz8LgwBUaPx8","emoji":"💍","toon":"https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop"}]},"media":{"introImage":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/image1.jpg","heroVideoDesktop":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/desktop_arti.webm","heroVideoMobile":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/mobile_arti.webm","bgMusicPrimary":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/ganesh_mantra.mp3","bgMusicSecondary":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/wedding_song.mp3"},"footer":{"line":"Your presence is our biggest blessing","family":"Yadav Family"}}
 </script>
 <div class="leaves-layer" id="leavesLayer" aria-hidden="true"></div>
 <div id="preloader" class="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-[radial-gradient(ellipse_at_center,_#7A1E2B_0%,_#3A0B12_100%)] transition-opacity duration-700">
@@ -273,9 +310,9 @@
   </section>
   <section id="ceremony-section" class="js-parallax-section snap-section relative flex flex-col items-center justify-center text-center px-5 py-16 sm:py-20 overflow-hidden">
     <div class="js-parallax-item text- sm:text-xs tracking- uppercase text-marigold mb-2">Event Details</div>
-    <h2 class="hindi-text js-parallax-item font-display text-[clamp(1.7rem,4vw,2.8rem)] text-maroon-deep mb-2">Schedule</h2>
-    <p class="js-parallax-item text-maroon/60 text-xs md:text-sm mb-5">Scroll down — Haldi, then Mehandi, then Wedding, one after another</p>
-    <div class="js-parallax-item flex items-center justify-center gap-3 mb-5"><span class="w-10 h-px bg-marigold/60"></span><span class="text-marigold text-sm">❋</span><span class="w-10 h-px bg-marigold/60"></span></div>
+    <h2 class="hindi-text js-parallax-item font-display text-[clamp(1.7rem,4vw,2.8rem)] text-maroon-deep mb-3">Schedule</h2>
+    <p class="js-parallax-item text-maroon/60 text-xs md:text-sm mb-6">Scroll down — Haldi, then Mehandi, then Wedding, one after another</p>
+    <div class="js-parallax-item flex items-center justify-center gap-3 mb-7"><span class="w-10 h-px bg-marigold/60"></span><span class="text-marigold text-sm">❋</span><span class="w-10 h-px bg-marigold/60"></span></div>
     <div id="ceremonyStack" class="event-stack js-parallax-item"></div>
   </section>
   <section id="venue" class="js-parallax-section snap-section min-h-screen flex flex-col items-center justify-center max-w-4xl mx-auto text-center px-5 py-20">
@@ -283,13 +320,36 @@
     <h2 class="hindi-text js-parallax-item font-display text-[clamp(1.7rem,4vw,2.4rem)] text-maroon-deep mb-3">How to Reach</h2>
     <div class="js-parallax-item w-16 h-0.5 bg-marigold/70 mx-auto mb-4"></div>
     <p class="js-parallax-item text-sm sm:text-base text-ink/70 max-w-md mx-auto mb-8">Your gracious presence will make this auspicious occasion even more beautiful.</p>
-    <div class="grid sm:grid-cols-2 gap-4 w-full max-w-3xl mb-6">
-      <div class="js-parallax-item invite-card bg-white rounded-xl p-5 text-left"><p class="text- tracking- uppercase text-marigold">Haldi • Mehandi • 18 Dec</p><h3 class="font-display text-xl text-maroon mt-1">Bellanta Hotel</h3><p class="text-sm text-ink/70 mt-1">Rajokri, NH8, Delhi-Gurugram Expy Service Lane, Rajokri Flyover, New Delhi 110038</p><a href="https://maps.app.goo.gl/sJS9PV15kEZDhuyBA" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-3 bg-maroon text-cream text-sm px-4 py-3 rounded-full min-h-">📍 Get Directions ↗</a></div>
-      <div class="js-parallax-item invite-card bg-white rounded-xl p-5 text-left"><p class="text- tracking- uppercase text-marigold">Wedding • 19 Dec</p><h3 class="font-display text-xl text-maroon mt-1">Bel-La Monde Hotel</h3><p class="text-sm text-ink/70 mt-1">NH8, Gurgaon - Delhi Expy, Near Shiv Murti, Avenue Bouganvillea, Rangpuri, New Delhi 110038</p><a href="https://maps.app.goo.gl/5G331Tz8LgwBUaPx8" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-3 bg-maroon text-cream text-sm px-4 py-3 rounded-full min-h-">📍 Get Directions ↗</a></div>
-    </div>
-    <div class="js-parallax-item invite-card max-w-2xl w-full mx-auto rounded-lg overflow-hidden border border-brass/30">
-      <div class="relative w-full h- sm:h- bg-marigold/10"><iframe id="venueMapFrame" title="Venue Map" src="" class="w-full h-full border-0" loading="lazy"></iframe></div>
-      <div class="bg-white px-5 sm:px-6 py-6 flex flex-col items-center gap-4"><div class="text-center"><p id="venueName" class="font-serif text-lg text-maroon"></p><p id="venueCity" class="text-sm sm:text-base text-ink/70 max-w-xs sm:max-w-sm mx-auto"></p></div><a id="venueDirectionsLink" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-maroon text-cream text-sm px-5 py-3 rounded-full min-h-">Get Directions</a></div>
+
+    <!-- HOW TO REACH : MAP ON TOP OF EACH BOX -->
+    <div class="venue-grid">
+      <!-- Box 1 : Bellanta — Haldi • Mehandi -->
+      <article class="js-parallax-item venue-card">
+        <div class="venue-map">
+          <iframe title="Bellanta Hotel Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Bellanta%20Hotel%20Rajokri%20New%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+          <span class="venue-map-badge">📍 Haldi • Mehandi</span>
+        </div>
+        <div class="venue-body">
+          <p class="venue-date">Haldi • Mehandi • 18 Dec</p>
+          <h3>Bellanta Hotel</h3>
+          <p class="venue-addr">Rajokri, NH8, Delhi-Gurugram Expy Service Lane, Rajokri Flyover, New Delhi 110038</p>
+          <div class="venue-actions"><a href="https://maps.app.goo.gl/sJS9PV15kEZDhuyBA" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-maroon text-cream text-sm px-4 py-3 rounded-full min-h-">📍 Get Directions ↗</a></div>
+        </div>
+      </article>
+
+      <!-- Box 2 : Bel-La Monde — Wedding -->
+      <article class="js-parallax-item venue-card">
+        <div class="venue-map">
+          <iframe title="Bel-La Monde Hotel Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Bel-La%20Monde%20Hotel%20Rangpuri%20New%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+          <span class="venue-map-badge">📍 Wedding</span>
+        </div>
+        <div class="venue-body">
+          <p class="venue-date">Wedding • 19 Dec</p>
+          <h3>Bel-La Monde Hotel</h3>
+          <p class="venue-addr">NH8, Gurgaon - Delhi Expy, Near Shiv Murti, Avenue Bouganvillea, Rangpuri, New Delhi 110038</p>
+          <div class="venue-actions"><a href="https://maps.app.goo.gl/5G331Tz8LgwBUaPx8" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-maroon text-cream text-sm px-4 py-3 rounded-full min-h-">📍 Get Directions ↗</a></div>
+        </div>
+      </article>
     </div>
   </section>
   <!-- 1. BLESSING PAGE — NOW ABOVE RSVP PAGE -->
@@ -339,9 +399,10 @@
       <div id="rsvpSuccess" class="hidden mt-4 bg-white border border-brass/50 rounded-2xl p-6 shadow-lg"><div class="text-4xl">🎉</div><h3 class="font-display text-2xl text-maroon mt-2">Thank You, <span id="rsvpSuccessName"></span>!</h3><p class="text-ink/70 text-sm mt-1" id="rsvpSuccessText"></p><button id="rsvpAgain" type="button" class="bg-cream border border-brass/60 text-sm px-5 py-3 rounded-full mt-4 min-h-">Edit RSVP</button></div>
     </div>
   </section>
-  <footer class="js-parallax-section snap-section relative overflow-hidden bg-maroon-deep text-brass-light text-center px-5 py-14 pb-[max(3.5rem,env(safe-area-inset-bottom))] font-display text-xl border-t border-brass/20">
-    <span id="footerLine" class="hindi-text relative z-[1] block max-w-md mx-auto"></span>
-    <span id="footerCoupleDate" class="relative z-[1] block mt-3 font-body text-sm tracking- opacity-70"></span>
+  <footer class="js-parallax-section snap-section relative overflow-hidden bg-maroon-deep text-brass-light text-center px-5 py-14 pb-[max(3.5rem,env(safe-area-inset-bottom))] border-t border-brass/20">
+    <span id="footerLine" class="footer-small hindi-text relative z-[1] block max-w-md mx-auto"></span>
+    <span id="footerFamily" class="footer-family hindi-text relative z-[1] block max-w-md mx-auto mt-3"></span>
+    <span id="footerCoupleDate" class="footer-small hindi-text relative z-[1] block mt-3"></span>
     <div class="relative z-[1] mt-6 flex flex-wrap justify-center gap-2"><a href="#blessings" class="border border-brass-light/60 text-sm px-5 py-3 rounded-full min-h- inline-flex items-center">Leave a Blessing</a><a href="#rsvp" class="bg-marigold text-maroon-deep text-sm font-bold px-5 py-3 rounded-full min-h- inline-flex items-center">RSVP Now</a></div>
   </footer>
 </div>
@@ -371,7 +432,7 @@
   setText('venueName',CONFIG.venue.name); setText('venueCity',CONFIG.venue.city);
   var embedQuery=CONFIG.venue.mapQuery||CONFIG.venue.name; var mapFrame=document.getElementById('venueMapFrame'); if(mapFrame) mapFrame.src='https://maps.google.com/maps?q='+encodeURIComponent(embedQuery)+'&t=&z=15&ie=UTF8&iwloc=&output=embed';
   var dirLink=document.getElementById('venueDirectionsLink'); if(dirLink) dirLink.href=CONFIG.venue.mapLink||'#';
-  setText('footerLine',CONFIG.footer.line); setText('footerCoupleDate',[CONFIG.couple.coupleShort,CONFIG.event.dateDisplay].filter(Boolean).join(' · '));
+  setText('footerLine',CONFIG.footer.line); setText('footerFamily',CONFIG.footer.family||'Yadav Family'); setText('footerCoupleDate',CONFIG.couple.coupleShort||'Prashasti Weds Nicholas');
   (function(){
     var events=(CONFIG.schedule&&CONFIG.schedule.events)||[]; var wrap=document.getElementById('ceremonyStack'); if(!wrap||!events.length) return;
     function toGCal(d){ return d.toISOString().replace(/[-:]/g,'').split('.')[0]+'Z'; }
@@ -379,7 +440,7 @@
     wrap.innerHTML = events.map(function(ev,i){
       var bg = ev.toon || '';
       var emoji = ev.emoji || '❋';
-      return '<article class="event-card"><div style="position:absolute;inset:0;background-image:url(\''+bg+'\');background-size:cover;background-position:center"></div><div class="event-card-inner"><span class="event-pill">EVENT '+(i+1)+' • '+esc(ev.titleEnglish||ev.title)+'</span><div class="event-emoji mt-3">'+emoji+'</div><h3>'+esc(ev.title)+'</h3><div class="event-meta"><b>'+esc(ev.dateDisplay)+'</b> • '+esc(ev.timeDisplay)+'<br>'+esc(ev.venueLine)+'<br><span style="opacity:.85;font-size:12px">'+esc(getEventAddress(ev))+'</span></div><p class="event-countdown-title">Countdown to '+esc(ev.title)+'</p><div class="event-countdown" data-countdown-target="'+esc(ev.dateISO)+'"><div class="cd-box"><span class="cd-num" data-cd-days>00</span><span class="cd-label">Days</span></div><div class="cd-box"><span class="cd-num" data-cd-hours>00</span><span class="cd-label">Hours</span></div><div class="cd-box"><span class="cd-num" data-cd-mins>00</span><span class="cd-label">Mins</span></div><div class="cd-box"><span class="cd-num" data-cd-secs>00</span><span class="cd-label">Secs</span></div></div><p class="event-countdown-title" data-cd-done style="display:none;margin-top:8px">🎉 This celebration is here!</p><div class="event-actions"><a class="btn-white" href="'+esc(getEventMapLink(ev))+'" target="_blank" rel="noopener">📍 Get Directions ↗</a><a class="btn-gold" href="'+calLink(ev)+'" target="_blank" rel="noopener">Add to Calendar</a></div></div></article>';
+      return '<article class="event-card"><div style="position:absolute;inset:0;background-image:url(\''+bg+'\');background-size:cover;background-position:center"></div><div class="event-card-inner"><span class="event-pill">EVENT '+(i+1)+' • '+esc(ev.titleEnglish||ev.title)+'</span><div class="event-emoji">'+emoji+'</div><h3>'+esc(ev.title)+'</h3><div class="event-meta"><span class="event-date-line"><b>'+esc(ev.dateDisplay)+'</b> • '+esc(ev.timeDisplay)+'</span><span class="event-venue-line">'+esc(ev.venueLine)+'</span><span class="event-address-line">'+esc(getEventAddress(ev))+'</span></div><div class="event-divider"></div><p class="event-countdown-title">Countdown to '+esc(ev.title)+'</p><div class="event-countdown" data-countdown-target="'+esc(ev.dateISO)+'"><div class="cd-box"><span class="cd-num" data-cd-days>00</span><span class="cd-label">Days</span></div><div class="cd-box"><span class="cd-num" data-cd-hours>00</span><span class="cd-label">Hours</span></div><div class="cd-box"><span class="cd-num" data-cd-mins>00</span><span class="cd-label">Mins</span></div><div class="cd-box"><span class="cd-num" data-cd-secs>00</span><span class="cd-label">Secs</span></div></div><p class="event-countdown-title" data-cd-done style="display:none;margin-top:8px">🎉 This celebration is here!</p><div class="event-actions"><a class="btn-white" href="'+esc(getEventMapLink(ev))+'" target="_blank" rel="noopener">📍 Get Directions ↗</a><a class="btn-gold" href="'+calLink(ev)+'" target="_blank" rel="noopener">Add to Calendar</a></div></div></article>';
     }).join('');
     hintState.ceremonyLast = true;
   })();
@@ -393,7 +454,6 @@
       var diff = target - now;
       var dEl=wrap.querySelector('[data-cd-days]'), hEl=wrap.querySelector('[data-cd-hours]'), mEl=wrap.querySelector('[data-cd-mins]'), sEl=wrap.querySelector('[data-cd-secs]');
       var doneEl = wrap.parentElement ? wrap.parentElement.querySelector('[data-cd-done]') : null;
-      /* done label lives inside #mainCountdownWrap, or as sibling inside event card */
       if(!doneEl){ doneEl = wrap.querySelector('[data-cd-done]'); }
       if(diff<=0){
         if(dEl) dEl.textContent='00'; if(hEl) hEl.textContent='00'; if(mEl) mEl.textContent='00'; if(sEl) sEl.textContent='00';
