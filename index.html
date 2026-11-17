@@ -6,6 +6,20 @@
 <meta name="theme-color" content="#3A0B12">
 <meta name="mobile-web-app-capable" content="yes">
 <title>Shubh Vivah | Nicholas & Prashasti</title>
+<!-- WhatsApp / link preview — cover image shown when this link is shared -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shubh Vivah | Prashasti Yadav ❋ Nicholas Shepherd">
+<meta property="og:description" content="We warmly invite you to our wedding celebration — 18th to 19th December 2026, New Delhi. Haldi • Mehandi • Wedding.">
+<meta property="og:image" content="https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/whatsapp%20cover%20image.jpg">
+<meta property="og:image:secure_url" content="https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/whatsapp%20cover%20image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Prashasti Yadav weds Nicholas Shepherd — Shubh Vivah, 19th December 2026">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shubh Vivah | Prashasti Yadav ❋ Nicholas Shepherd">
+<meta name="twitter:description" content="We warmly invite you to our wedding celebration — 18th to 19th December 2026, New Delhi.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/whatsapp%20cover%20image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Mukta:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -152,13 +166,19 @@
     .hero-shloka{width:90vw!important}
   }
 
-  /* ===== FIX 1 : INTRO / COUPLE PAGE — TEXT FULLY VISIBLE ON MOBILE ===== */
+  /* ===== FIX : INTRO / COUPLE PAGE — TEXT FULLY VISIBLE ON MOBILE ===== */
+  /* "Shubh Vivah" = SAME colour as "We warmly invite you to our wedding celebration" (#F6EEDD cream/white). Shubh + Vivah EXACT same style/colour. */
+  /* "Prashasti Yadav ❋ Nicholas Shepherd" = stays YELLOWISH as before (#F4B94D), bigger. */
   #intro{background:#3A0B12}
   .intro-image-wrap{position:relative;overflow:hidden}
   .intro-image-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center}
   .intro-text-wrap{position:relative;z-index:10;background:#3A0B12}
-  .intro-name-line{display:block;white-space:nowrap;line-height:1.15;color:#F6EEDD;text-shadow:0 2px 10px rgba(0,0,0,.55)}
-  .intro-title-line{color:#F6EEDD;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+  .intro-sub{color:#F6EEDD!important}
+  .intro-title-line{color:#F6EEDD!important;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+  .intro-title-line span{color:#F6EEDD!important}
+  #introNames{color:#F4B94D!important}
+  .intro-name-line{display:block;white-space:nowrap;line-height:1.15;color:#F4B94D!important;text-shadow:0 2px 12px rgba(0,0,0,.6);font-size:1.35em}
+  #introNames .intro-amp{color:#F4B94D!important}
   @media(max-width:767px){
     #intro{display:flex!important;flex-direction:column!important;justify-content:flex-start!important;align-items:stretch!important;min-height:100svh!important;min-height:100dvh!important;padding:0!important;overflow:hidden}
     .intro-image-wrap{flex:0 0 42svh!important;flex-basis:42dvh!important;height:42svh!important;height:42dvh!important;min-height:300px!important;width:100%!important;position:relative!important}
@@ -167,11 +187,11 @@
     .intro-mobile-fade{display:none!important}
     .intro-text-wrap{flex:1 1 auto!important;width:100%!important;margin:0!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;text-align:center!important;background:#3A0B12!important;padding:14px 16px calc(18px + env(safe-area-inset-bottom))!important;gap:0!important;position:relative!important;z-index:10!important}
     #blessingsLine{display:block!important;width:100%!important;max-width:92vw!important;margin:0 auto 8px!important;font-size:11px!important;line-height:1.5!important;letter-spacing:1px!important;text-transform:uppercase!important;color:#F0D896!important;opacity:1!important;text-shadow:none!important;white-space:normal!important}
-    .intro-sub{color:#FFFFFF!important;opacity:1!important;font-size:15px!important;line-height:1.5!important;max-width:90vw!important;margin:0 auto!important;text-shadow:none!important}
-    #introTitle{font-size:34px!important;line-height:1.15!important;margin:10px 0 2px!important;white-space:nowrap!important}
-    #introNames{font-size:clamp(24px,7vw,30px)!important;line-height:1.18!important;margin:6px 0 0!important;width:100%!important}
-    #introNames .intro-name-line{font-size:inherit!important;white-space:nowrap!important}
-    #introNames .intro-amp{font-size:22px!important;line-height:1!important;color:#F4B94D!important;display:block!important;margin:2px 0!important}
+    .intro-sub{color:#F6EEDD!important;opacity:1!important;font-size:15px!important;line-height:1.5!important;max-width:90vw!important;margin:0 auto!important;text-shadow:none!important}
+    #introTitle{font-size:38px!important;line-height:1.15!important;margin:10px 0 2px!important;white-space:nowrap!important;color:#F6EEDD!important}
+    #introNames{font-size:clamp(32px,9.5vw,42px)!important;line-height:1.18!important;margin:8px 0 0!important;width:100%!important;color:#F4B94D!important}
+    #introNames .intro-name-line{font-size:inherit!important;white-space:nowrap!important;color:#F4B94D!important}
+    #introNames .intro-amp{font-size:26px!important;line-height:1!important;color:#F4B94D!important;display:block!important;margin:2px 0!important}
     #intro .intro-divider{width:64px!important;height:2px!important;background:#E8961F!important;margin:12px auto!important;flex:none}
     #mainCountdownWrap{margin:2px auto 10px!important}
     #introDateCity{font-size:12px!important;letter-spacing:1.5px!important;line-height:1.6!important;color:#F0D896!important}
@@ -183,30 +203,32 @@
     .intro-image-wrap{position:absolute;inset:0;z-index:0}
     .intro-text-wrap{position:relative;z-index:2;width:50%;margin-left:auto;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px}
     #blessingsLine{max-width:380px}
+    #introNames{font-size:clamp(2.4rem,4.2vw,3.4rem)!important}
   }
 
   /* ===== EVENT BOXES — ROOMY / BREATHING SPACE — NO SCROLLER, STACK ON PAGE SCROLL ===== */
   #ceremony-section{padding-top:3.5rem!important;padding-bottom:3.5rem!important}
   .event-stack{display:flex;flex-direction:column;gap:36px!important;width:100%;max-width:32rem;margin-left:auto;margin-right:auto;overflow:visible!important;max-height:none!important;height:auto!important;touch-action:auto;overscroll-behavior:auto;scroll-snap-type:none!important;padding:6px 2px 12px}
-  .event-card{position:relative;overflow:hidden;border-radius:22px;min-height:400px;display:flex;align-items:flex-end;text-align:left;color:#fff;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;box-shadow:0 22px 48px rgba(58,11,18,.28);border:1px solid rgba(201,163,78,.5);flex:none;width:100%}
-  .event-card::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.18) 35%,rgba(58,11,18,.88) 78%,rgba(30,8,10,.96) 100%);z-index:1}
-  .event-card-inner{position:relative;z-index:2;width:100%;padding:32px 28px 30px;display:flex;flex-direction:column;gap:0}
+  .event-card{position:relative;overflow:hidden;border-radius:22px;min-height:440px;display:flex;align-items:flex-end;text-align:left;color:#fff;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;box-shadow:0 22px 48px rgba(58,11,18,.28);border:1px solid rgba(201,163,78,.5);flex:none;width:100%}
+  /* FIX 2: stronger readable scrim so text stays visible over the real photos */
+  .event-card::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.28) 0%,rgba(0,0,0,.35) 30%,rgba(20,5,8,.78) 62%,rgba(20,5,8,.96) 100%);z-index:1}
+  .event-card-inner{position:relative;z-index:2;width:100%;padding:32px 28px 30px;display:flex;flex-direction:column;gap:0;background:linear-gradient(180deg,transparent 0%,rgba(20,5,8,.55) 28%,rgba(20,5,8,.88) 100%);border-radius:0 0 22px 22px}
   .event-emoji{font-size:52px;line-height:1;margin:16px 0 0;filter:drop-shadow(0 6px 14px rgba(0,0,0,.45))}
-  .event-card .event-pill{display:inline-block;align-self:flex-start;background:rgba(255,255,255,.92);color:#7A1E2B;font-size:11px;font-weight:700;letter-spacing:2px;padding:7px 14px;border-radius:999px;margin-bottom:2px}
-  .event-card h3{font-family:'Yatra One',cursive;font-size:30px;line-height:1.2;margin:14px 0 10px;text-shadow:0 2px 10px rgba(0,0,0,.6)}
-  .event-card .event-meta{font-size:15px;line-height:1.85;color:#F6EEDD;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+  .event-card .event-pill{display:inline-block;align-self:flex-start;background:rgba(255,255,255,.95);color:#7A1E2B;font-size:11px;font-weight:700;letter-spacing:2px;padding:7px 14px;border-radius:999px;margin-bottom:2px}
+  .event-card h3{font-family:'Yatra One',cursive;font-size:30px;line-height:1.2;margin:14px 0 10px;color:#FFFFFF;text-shadow:0 2px 12px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.8)}
+  .event-card .event-meta{font-size:15px;line-height:1.85;color:#FFFFFF;text-shadow:0 2px 8px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.7)}
   .event-card .event-meta .event-date-line{display:block;margin-bottom:6px}
   .event-card .event-meta .event-venue-line{display:block;margin-bottom:6px}
-  .event-card .event-meta .event-address-line{display:block;font-size:13px;line-height:1.65;opacity:.85}
-  .event-divider{width:56px;height:2px;background:rgba(244,185,77,.85);border-radius:2px;margin:18px 0 2px}
+  .event-card .event-meta .event-address-line{display:block;font-size:13px;line-height:1.65;opacity:.95}
+  .event-divider{width:56px;height:2px;background:rgba(244,185,77,.95);border-radius:2px;margin:18px 0 2px}
   .event-card .event-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-  .event-card .event-actions a{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;padding:14px 20px;border-radius:999px;text-decoration:none;min-height:48px}
+  .event-card .event-actions a{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;padding:14px 20px;border-radius:999px;text-decoration:none;min-height:48px;box-shadow:0 6px 18px rgba(0,0,0,.35)}
   .event-card .btn-white{background:#fff;color:#7A1E2B}
   .event-card .btn-gold{background:#E8961F;color:#3A0B12}
   @media(max-width:640px){
     #ceremony-section{padding-top:2.75rem!important;padding-bottom:2.75rem!important}
     .event-stack{gap:30px!important;padding:4px 2px 10px}
-    .event-card{min-height:360px;border-radius:20px}
+    .event-card{min-height:400px;border-radius:20px}
     .event-card-inner{padding:28px 22px 26px}
     .event-card h3{font-size:26px;margin:12px 0 9px}
     .event-card .event-meta{font-size:14px;line-height:1.8}
@@ -259,7 +281,7 @@
 </head>
 <body class="bg-cream text-ink font-body">
 <script id="wedding-config" type="application/json">
-{"couple":{"brideName":"Prashasti Yadav","groomName":"Nicholas Shepherd","coupleShort":"Prashasti Weds Nicholas"},"hosts":{"blessingsLine":"With the blessings of our parents and entire family","invitationNote":"Warmly Invited"},"event":{"titleHindi":"Shubh Vivah","titleEnglish":"SHUBH VIVAH","dateDisplay":"19 December 2026, Saturday","dateRange":"17 - 19 December 2026","cityLine":"New Delhi"},"venues":{"bellanta":{"name":"Bellanta Hotel","address":"Rajokri, NH8, Delhi-Gurugram Expy Service Lane, Rajokri Flyover, New Delhi, Delhi 110038","mapLink":"https://maps.app.goo.gl/sJS9PV15kEZDhuyBA","mapQuery":"Bellanta Hotel Rajokri New Delhi"},"belLaMonde":{"name":"Bel-La Monde Hotel","address":"NH8, Gurgaon - Delhi Expy, Near Shiv Murti, Avenue Bouganvillea, Rangpuri, New Delhi, Delhi 110038","mapLink":"https://maps.app.goo.gl/5G331Tz8LgwBUaPx8","mapQuery":"Bel-La Monde Hotel Rangpuri New Delhi"}},"venue":{"name":"Bel-La Monde Hotel","city":"NH8, Gurgaon - Delhi Expy, Near Shiv Murti, Avenue Bouganvillea, Rangpuri, New Delhi, Delhi 110038","mapQuery":"Bel-La Monde Hotel Rangpuri New Delhi","mapLink":"https://maps.app.goo.gl/5G331Tz8LgwBUaPx8"},"schedule":{"events":[{"title":"Haldi Ceremony","titleEnglish":"HALDI CEREMONY","dateDisplay":"18 December 2026, Friday","dateISO":"2026-12-18T11:00:00+05:30","timeDisplay":"11:00 AM","venueLine":"Bellanta Hotel, Rajokri, New Delhi","venue":"Bellanta Hotel","mapLink":"https://maps.app.goo.gl/sJS9PV15kEZDhuyBA","emoji":"💛","toon":"https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop"},{"title":"Mehandi Ceremony","titleEnglish":"MEHANDI CEREMONY","dateDisplay":"18 December 2026, Friday","dateISO":"2026-12-18T18:00:00+05:30","timeDisplay":"6:00 PM","venueLine":"Bellanta Hotel, Rajokri, New Delhi","venue":"Bellanta Hotel","mapLink":"https://maps.app.goo.gl/sJS9PV15kEZDhuyBA","emoji":"🌿","toon":"https://images.unsplash.com/photo-1610173826608-bd1f53a52db1?q=80&w=1200&auto=format&fit=crop"},{"title":"Wedding Ceremony","titleEnglish":"WEDDING CEREMONY","dateDisplay":"19 December 2026, Saturday","dateISO":"2026-12-19T19:00:00+05:30","timeDisplay":"7:00 PM","venueLine":"Bel-La Monde Hotel, Rangpuri, New Delhi","venue":"Bel-La Monde Hotel","mapLink":"https://maps.app.goo.gl/5G331Tz8LgwBUaPx8","emoji":"💍","toon":"https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop"}]},"media":{"introImage":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/image1.jpg","heroVideoDesktop":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/desktop_arti.webm","heroVideoMobile":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/mobile_arti.webm","bgMusicPrimary":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/ganesh_mantra.mp3","bgMusicSecondary":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/wedding_song.mp3"},"footer":{"line":"Your presence is our biggest blessing","family":"Yadav Family"}}
+{"couple":{"brideName":"Prashasti Yadav","groomName":"Nicholas Shepherd","coupleShort":"Prashasti Weds Nicholas"},"hosts":{"blessingsLine":"With the blessings of our parents and entire family","invitationNote":"Warmly Invited"},"event":{"titleHindi":"Shubh Vivah","titleEnglish":"SHUBH VIVAH","dateDisplay":"19th December 2026, Saturday","dateRange":"18th to 19th December 2026","cityLine":"New Delhi"},"venues":{"bellanta":{"name":"Bellanta Hotel","address":"Rajokri, NH8, Delhi-Gurugram Expy Service Lane, Rajokri Flyover, New Delhi, Delhi 110038","mapLink":"https://maps.app.goo.gl/sJS9PV15kEZDhuyBA","mapQuery":"Bellanta Hotel Rajokri New Delhi"},"belLaMonde":{"name":"Bel-La Monde Hotel","address":"NH8, Gurgaon - Delhi Expy, Near Shiv Murti, Avenue Bouganvillea, Rangpuri, New Delhi, Delhi 110038","mapLink":"https://maps.app.goo.gl/5G331Tz8LgwBUaPx8","mapQuery":"Bel-La Monde Hotel Rangpuri New Delhi"}},"venue":{"name":"Bel-La Monde Hotel","city":"NH8, Gurgaon - Delhi Expy, Near Shiv Murti, Avenue Bouganvillea, Rangpuri, New Delhi, Delhi 110038","mapQuery":"Bel-La Monde Hotel Rangpuri New Delhi","mapLink":"https://maps.app.goo.gl/5G331Tz8LgwBUaPx8"},"schedule":{"events":[{"title":"Haldi Ceremony","titleEnglish":"HALDI CEREMONY","dateDisplay":"18th December 2026, Friday","dateISO":"2026-12-18T11:00:00+05:30","timeDisplay":"11:00 AM","venueLine":"Bellanta Hotel, Rajokri, New Delhi","venue":"Bellanta Hotel","mapLink":"https://maps.app.goo.gl/sJS9PV15kEZDhuyBA","emoji":"💛","toon":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/Haldi%20Image.jpeg"},{"title":"Mehandi Ceremony","titleEnglish":"MEHANDI CEREMONY","dateDisplay":"18th December 2026, Friday","dateISO":"2026-12-18T18:00:00+05:30","timeDisplay":"6:00 PM","venueLine":"Bellanta Hotel, Rajokri, New Delhi","venue":"Bellanta Hotel","mapLink":"https://maps.app.goo.gl/sJS9PV15kEZDhuyBA","emoji":"🌿","toon":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/Mahendi%20Image.jpeg"},{"title":"Wedding Ceremony","titleEnglish":"WEDDING CEREMONY","dateDisplay":"19th December 2026, Saturday","dateISO":"2026-12-19T19:00:00+05:30","timeDisplay":"7:00 PM","venueLine":"Bel-La Monde Hotel, Rangpuri, New Delhi","venue":"Bel-La Monde Hotel","mapLink":"https://maps.app.goo.gl/5G331Tz8LgwBUaPx8","emoji":"💍","toon":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/Wedding%20image.jpeg"}]},"media":{"introImage":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/image1.jpg","heroVideoDesktop":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/desktop_arti.webm","heroVideoMobile":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/mobile_arti.webm","bgMusicPrimary":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/ganesh_mantra.mp3","bgMusicSecondary":"https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/wedding_song.mp3"},"footer":{"line":"Your presence is our biggest blessing","family":"Yadav Family"}}
 </script>
 <div class="leaves-layer" id="leavesLayer" aria-hidden="true"></div>
 <div id="preloader" class="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-[radial-gradient(ellipse_at_center,_#7A1E2B_0%,_#3A0B12_100%)] transition-opacity duration-700">
@@ -359,7 +381,6 @@
       <h2 class="hindi-text font-display text-[clamp(1.8rem,4.5vw,2.8rem)] mb-2">Leave Your Blessings 💛</h2>
       <p class="text-cream/80 text-sm sm:text-base max-w-md mx-auto mb-2">Your words mean the world to us. Leave a blessing for Nicholas &amp; Prashasti.</p>
       <p class="text-brass-light text-sm mb-2">❤️ <span id="blessingCount">0</span> blessings</p>
-      <p class="text-xs mb-6 flex items-center justify-center gap-1.5"><span id="blessingSyncDot" class="sync-dot"></span><span id="blessingSyncText" class="text-cream/60">Connected to Google Form via Apps Script</span></p>
       <form id="blessingForm" class="bg-white/10 backdrop-blur border border-brass-light/40 rounded-2xl p-5 sm:p-6 text-left max-w-2xl mx-auto" novalidate>
         <label class="text-xs tracking-widest uppercase text-cream/70 font-semibold" for="blessingName">Your name *</label>
         <input id="blessingName" name="name" type="text" required maxlength="25" autocomplete="name" class="field mt-1" placeholder="Your name">
@@ -378,8 +399,7 @@
     <div class="relative z-[1] w-full max-w-3xl mx-auto">
       <div class="js-parallax-item text-xs tracking- uppercase text-marigold mb-2">RSVP</div>
       <h2 class="hindi-text js-parallax-item font-display text-[clamp(1.8rem,4.5vw,2.8rem)] text-maroon-deep mb-2">Will You Join Us?</h2>
-      <p class="js-parallax-item text-sm sm:text-base text-ink/70 max-w-md mx-auto mb-2">Please let us know by <b>1 December 2026</b> so we can save your seat.</p>
-      <p class="js-parallax-item text-xs mb-6 flex items-center justify-center gap-1.5"><span id="rsvpSyncDot" class="sync-dot"></span><span id="rsvpSyncText" class="text-ink/50">Connected to Google Form via Apps Script</span></p>
+      <p class="js-parallax-item text-sm sm:text-base text-ink/70 max-w-md mx-auto mb-2">Please let us know by <b>10th December 2026</b> so we can save your seat.</p>
       <form id="rsvpForm" class="js-parallax-item invite-card bg-white text-left rounded-2xl p-5 sm:p-8 border border-brass/30 shadow-xl" novalidate>
         <span class="card-corner tl"></span><span class="card-corner tr"></span><span class="card-corner bl"></span><span class="card-corner br"></span>
         <label class="text-xs tracking-widest uppercase text-maroon/70 font-semibold" for="rsvpName">Your name (max 25) *</label>
@@ -393,7 +413,7 @@
         <label class="text-xs tracking-widest uppercase text-maroon/70 font-semibold block mt-4" for="rsvpMessage">A note for Prashasti &amp; Nicholas (optional)</label>
         <textarea id="rsvpMessage" name="message" rows="3" maxlength="500" class="field mt-1" placeholder="A note for Prashasti & Nicholas (optional)"></textarea>
         <p class="text-right text-xs text-ink/40 mt-1"><span id="rsvpChar">0</span>/500</p>
-        <button id="rsvpSubmitBtn" type="submit" class="w-full mt-4 bg-maroon hover:bg-maroon-light text-cream font-semibold py-4 rounded-full shadow-lg transition min-h-">Confirm RSVP ❋</button>
+        <button id="rsvpSubmitBtn" type="submit" class="w-full mt-4 bg-maroon hover:bg-maroon-light text-cream font-semibold py-4 rounded-full shadow-lg transition min-h-">Confirm RSVP</button>
         <p id="rsvpStatus" class="text-center text-xs mt-3 text-ink/60 min-h-"></p>
       </form>
       <div id="rsvpSuccess" class="hidden mt-4 bg-white border border-brass/50 rounded-2xl p-6 shadow-lg"><div class="text-4xl">🎉</div><h3 class="font-display text-2xl text-maroon mt-2">Thank You, <span id="rsvpSuccessName"></span>!</h3><p class="text-ink/70 text-sm mt-1" id="rsvpSuccessText"></p><button id="rsvpAgain" type="button" class="bg-cream border border-brass/60 text-sm px-5 py-3 rounded-full mt-4 min-h-">Edit RSVP</button></div>
@@ -425,7 +445,8 @@
   function getEventAddress(ev){ if(ev&&ev.venue&&ev.venue.indexOf('Bellanta')!==-1) return CONFIG.venues.bellanta.address; return CONFIG.venues.belLaMonde.address; }
   document.title = CONFIG.event.titleHindi + ' | ' + CONFIG.couple.brideName + ' & ' + CONFIG.couple.groomName;
   setText('preloaderTitle',CONFIG.event.titleHindi); setText('inviteCardTitle',CONFIG.event.titleHindi); setText('inviteCardNames',CONFIG.couple.brideName+' ❋ '+CONFIG.couple.groomName); setText('inviteSealLetter',(CONFIG.couple.brideName||'').charAt(0)); setText('blessingsLine',CONFIG.hosts.blessingsLine); setText('invitationNote',CONFIG.hosts.invitationNote);
-  var introTitle=document.getElementById('introTitle'); if(introTitle) introTitle.innerHTML='Shubh <span style="color:#F4B94D">Vivah</span>';
+  /* Shubh + Vivah — one string, one style, one colour = same as "We warmly invite..." (#F6EEDD). Names stay yellowish (#F4B94D) as before. */
+  var introTitle=document.getElementById('introTitle'); if(introTitle) introTitle.textContent='Shubh Vivah';
   var introNames=document.getElementById('introNames'); if(introNames) introNames.innerHTML='<span class="intro-name-line">'+esc(CONFIG.couple.brideName)+'</span><span class="intro-amp">❋</span><span class="intro-name-line">'+esc(CONFIG.couple.groomName)+'</span>';
   var introDateCity=document.getElementById('introDateCity'); if(introDateCity) introDateCity.innerHTML='<span>'+CONFIG.event.dateDisplay+'</span><span class="block mt-1">'+CONFIG.event.cityLine+'</span>';
   var introImg=document.getElementById('introImage'); if(introImg&&CONFIG.media.introImage) introImg.src=CONFIG.media.introImage;
@@ -535,14 +556,14 @@
   var blessingForm=document.getElementById('blessingForm'), blessingName=document.getElementById('blessingName'), blessingText=document.getElementById('blessingText'), blessingChar=document.getElementById('blessingChar'), blessingBtn=document.getElementById('blessingSubmitBtn'), blessingStatus=document.getElementById('blessingStatus'), blessingWall=document.getElementById('blessingWall'), blessingEmpty=document.getElementById('blessingEmpty'), blessingLoading=document.getElementById('blessingLoading'), blessingCount=document.getElementById('blessingCount'), blessWrap=document.getElementById('blessingScrollWrap');
   blessingText.addEventListener('input',function(){ if(blessingText.value.length>500) blessingText.value=blessingText.value.slice(0,500); blessingChar.textContent=blessingText.value.length; });
   function renderBlessings(list){ list=list||[]; blessingCount.textContent=list.length; blessingLoading.style.display='none'; if(!list.length){ blessingEmpty.classList.remove('hidden'); blessingWall.innerHTML=''; return; } blessingEmpty.classList.add('hidden'); blessingWall.innerHTML=list.map(function(b){ var name=b.name||'Guest'; var msg=b.message||b.blessing||b.text||''; var date=b.date||''; var dateStr=''; if(date){ try{ dateStr=new Date(date).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}); }catch(e){ dateStr=String(date); } } return '<article class="blessing-card"><div class="blessing-card-head"><span class="text-2xl">💛</span><span class="text- text-ink/40">'+esc(dateStr)+'</span></div><div class="blessing-card-msg">“'+esc(msg)+'”</div><div class="blessing-card-foot"><b class="text-maroon text-sm">— '+esc(name)+'</b><span class="text-sm">💛</span></div></article>'; }).join(''); }
-  function loadBlessings(){ blessingLoading.style.display='block'; blessingLoading.textContent='Loading blessings...'; fetch(GOOGLE_BACKEND_URL+'?action=blessings&t='+Date.now()).then(function(r){ return r.json(); }).then(function(data){ renderBlessings((data&&data.blessings)||[]); setSync('blessingSyncDot','blessingSyncText',true,'Loaded from Google Form ✓'); }).catch(function(){ blessingLoading.style.display='none'; blessingEmpty.classList.remove('hidden'); blessingEmpty.textContent='Could not load blessings. Please refresh.'; setSync('blessingSyncDot','blessingSyncText',false,'Could not load blessings'); }); }
+  function loadBlessings(){ blessingLoading.style.display='block'; blessingLoading.textContent='Loading blessings...'; fetch(GOOGLE_BACKEND_URL+'?action=blessings&t='+Date.now()).then(function(r){ return r.json(); }).then(function(data){ renderBlessings((data&&data.blessings)||[]);  }).catch(function(){ blessingLoading.style.display='none'; blessingEmpty.classList.remove('hidden'); blessingEmpty.textContent='Could not load blessings. Please refresh.'; setSync('blessingSyncDot','blessingSyncText',false,'Could not load blessings'); }); }
   loadBlessings();
   var blessPrev=document.getElementById('blessPrevBtn'), blessNext=document.getElementById('blessNextBtn');
   function blessScroll(dir){ if(!blessWrap) return; var card=blessWrap.querySelector('.blessing-card'); var w=card?card.offsetWidth+14:314; blessWrap.scrollBy({left:dir*w,behavior:'smooth'}); }
   if(blessPrev) blessPrev.addEventListener('click',function(){ blessScroll(-1); });
   if(blessNext) blessNext.addEventListener('click',function(){ blessScroll(1); });
   if(blessWrap){ blessWrap.addEventListener('wheel',function(e){ if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){ e.preventDefault(); blessWrap.scrollLeft += e.deltaY; } },{passive:false}); }
-  if(blessingForm){ blessingForm.addEventListener('submit',function(e){ e.preventDefault(); var name=(blessingName.value||'').trim(); var blessing=(blessingText.value||'').slice(0,500).trim(); if(!name){ alert('Please enter your name'); blessingName.focus(); return; } if(name.length>25){ alert('Name must be max 25 characters'); return; } if(!blessing){ alert('Please write your blessing'); blessingText.focus(); return; } blessingBtn.classList.add('btn-loading'); blessingBtn.textContent='Posting...'; blessingStatus.textContent='Posting your blessing...'; postJSON({action:'blessing',name:name,blessing:blessing}).then(function(res){ blessingBtn.classList.remove('btn-loading'); blessingBtn.textContent='Post Blessing ❋'; if(res.ok){ setSync('blessingSyncDot','blessingSyncText',true,'Saved to Google Form ✓'); blessingStatus.textContent='✅ Blessing saved to Google Form!'; blessingForm.reset(); blessingChar.textContent='0'; loadBlessings(); blessWrap.scrollIntoView({behavior:'smooth',block:'center'}); } else{ setSync('blessingSyncDot','blessingSyncText',false,'Could not save — please try again'); blessingStatus.textContent='Could not save. Please try again.'; alert('Blessing could not be saved. Please check Apps Script deployment (Execute as: Me, Who has access: Anyone) and try again.'); } }); }); }
+  if(blessingForm){ blessingForm.addEventListener('submit',function(e){ e.preventDefault(); var name=(blessingName.value||'').trim(); var blessing=(blessingText.value||'').slice(0,500).trim(); if(!name){ alert('Please enter your name'); blessingName.focus(); return; } if(name.length>25){ alert('Name must be max 25 characters'); return; } if(!blessing){ alert('Please write your blessing'); blessingText.focus(); return; } blessingBtn.classList.add('btn-loading'); blessingBtn.textContent='Posting...'; blessingStatus.textContent='Posting your blessing...'; postJSON({action:'blessing',name:name,blessing:blessing}).then(function(res){ blessingBtn.classList.remove('btn-loading'); blessingBtn.textContent='Post Blessing'; if(res.ok){ setSync('blessingSyncDot','blessingSyncText',true,'Saved to Google Form ✓'); blessingStatus.textContent='✅ Blessing saved to Google Form!'; blessingForm.reset(); blessingChar.textContent='0'; loadBlessings(); blessWrap.scrollIntoView({behavior:'smooth',block:'center'}); } else{ setSync('blessingSyncDot','blessingSyncText',false,'Could not save — please try again'); blessingStatus.textContent='Could not save. Please try again.'; alert('Blessing could not be saved. Please check Apps Script deployment (Execute as: Me, Who has access: Anyone) and try again.'); } }); }); }
 })();
 </script>
 </body>
