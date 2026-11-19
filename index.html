@@ -16,8 +16,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Prashasti Yadav weds Nicholas Shepherd — Shubh Vivah, 19th December 2026">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Shubh Vivah | Prashasti Yadav & Nicholas Shepherd">
-<meta name="twitter:description" content="We warmly invite you to our wedding celebration — 19th December 2026, New Delhi.">
+<meta name="twitter:title" content="Shubh Vivah | Prashasti Yadav ❋ Nicholas Shepherd">
+<meta name="twitter:description" content="We warmly invite you to our wedding celebration — 18th to 19th December 2026, New Delhi.">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/NicholasShepherd10/Nicholas-Prashasti/main/whatsapp%20cover%20image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Mukta:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
@@ -372,7 +372,6 @@
       <h2 class="hindi-text font-display text-[clamp(1.8rem,4.5vw,2.8rem)] mb-2">Leave Your Blessings 💛</h2>
       <p class="text-cream/80 text-sm sm:text-base max-w-md mx-auto mb-2">Your words mean the world to us. Leave a blessing for Nicholas &amp; Prashasti.</p>
       <p class="text-brass-light text-sm mb-2">❤️ <span id="blessingCount">0</span> blessings</p>
-      <p class="text-xs mb-6 flex items-center justify-center gap-1.5"><span id="blessingSyncDot" class="sync-dot"></span><span id="blessingSyncText" class="text-cream/60">Connected to Google Form via Apps Script</span></p>
       <form id="blessingForm" class="bg-white/10 backdrop-blur border border-brass-light/40 rounded-2xl p-5 sm:p-6 text-left max-w-2xl mx-auto" novalidate>
         <label class="text-xs tracking-widest uppercase text-cream/70 font-semibold" for="blessingName">Your name *</label>
         <input id="blessingName" name="name" type="text" required maxlength="25" autocomplete="name" class="field mt-1" placeholder="Your name">
@@ -392,7 +391,6 @@
       <div class="js-parallax-item text-xs tracking- uppercase text-marigold mb-2">RSVP</div>
       <h2 class="hindi-text js-parallax-item font-display text-[clamp(1.8rem,4.5vw,2.8rem)] text-maroon-deep mb-2">Will You Join Us?</h2>
       <p class="js-parallax-item text-sm sm:text-base text-ink/70 max-w-md mx-auto mb-2">Please let us know by <b>1 December 2026</b> so we can save your seat.</p>
-      <p class="js-parallax-item text-xs mb-6 flex items-center justify-center gap-1.5"><span id="rsvpSyncDot" class="sync-dot"></span><span id="rsvpSyncText" class="text-ink/50">Connected to Google Form via Apps Script</span></p>
       <form id="rsvpForm" class="js-parallax-item invite-card bg-white text-left rounded-2xl p-5 sm:p-8 border border-brass/30 shadow-xl" novalidate>
         <span class="card-corner tl"></span><span class="card-corner tr"></span><span class="card-corner bl"></span><span class="card-corner br"></span>
         <label class="text-xs tracking-widest uppercase text-maroon/70 font-semibold" for="rsvpName">Your name (max 25) *</label>
@@ -402,7 +400,7 @@
         <label class="text-xs tracking-widest uppercase text-maroon/70 font-semibold block mt-4" for="rsvpAttendance">Will you be joining us? *</label>
         <select id="rsvpAttendance" name="attendance" required class="field mt-1"><option value="" disabled selected>Select...</option><option value="Joyfully attending">Joyfully attending</option><option value="Unable to attend">Unable to attend</option></select>
         <label class="text-xs tracking-widest uppercase text-maroon/70 font-semibold block mt-4" for="rsvpEvent">Celebration</label>
-        <select id="rsvpEvent" name="event" class="field mt-1"><option value="All celebrations" selected>All celebrations</option><option value="Cocktail Evening">Cocktail Evening</option><option value="Haldi & Mehendi">Haldi &amp; Mehendi</option><option value="Church Wedding">Church Wedding</option><option value="Reception">Reception</option></select>
+        <select id="rsvpEvent" name="event" class="field mt-1"><option value="Wedding">Wedding</option></select>
         <label class="text-xs tracking-widest uppercase text-maroon/70 font-semibold block mt-4" for="rsvpMessage">A note for Prashasti &amp; Nicholas (optional)</label>
         <textarea id="rsvpMessage" name="message" rows="3" maxlength="500" class="field mt-1" placeholder="A note for Prashasti & Nicholas (optional)"></textarea>
         <p class="text-right text-xs text-ink/40 mt-1"><span id="rsvpChar">0</span>/500</p>
@@ -641,7 +639,7 @@ if(isWedding){
   var blessingForm=document.getElementById('blessingForm'), blessingName=document.getElementById('blessingName'), blessingText=document.getElementById('blessingText'), blessingChar=document.getElementById('blessingChar'), blessingBtn=document.getElementById('blessingSubmitBtn'), blessingStatus=document.getElementById('blessingStatus'), blessingWall=document.getElementById('blessingWall'), blessingEmpty=document.getElementById('blessingEmpty'), blessingLoading=document.getElementById('blessingLoading'), blessingCount=document.getElementById('blessingCount'), blessWrap=document.getElementById('blessingScrollWrap');
   blessingText.addEventListener('input',function(){ if(blessingText.value.length>500) blessingText.value=blessingText.value.slice(0,500); blessingChar.textContent=blessingText.value.length; });
   function renderBlessings(list){ list=list||[]; blessingCount.textContent=list.length; blessingLoading.style.display='none'; if(!list.length){ blessingEmpty.classList.remove('hidden'); blessingWall.innerHTML=''; return; } blessingEmpty.classList.add('hidden'); blessingWall.innerHTML=list.map(function(b){ var name=b.name||'Guest'; var msg=b.message||b.blessing||b.text||''; var date=b.date||''; var dateStr=''; if(date){ try{ dateStr=new Date(date).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}); }catch(e){ dateStr=String(date); } } return '<article class="blessing-card"><div class="blessing-card-head"><span class="text-2xl">💛</span><span class="text- text-ink/40">'+esc(dateStr)+'</span></div><div class="blessing-card-msg">“'+esc(msg)+'”</div><div class="blessing-card-foot"><b class="text-maroon text-sm">— '+esc(name)+'</b><span class="text-sm">💛</span></div></article>'; }).join(''); }
-  function loadBlessings(){ blessingLoading.style.display='block'; blessingLoading.textContent='Loading blessings...'; fetch(GOOGLE_BACKEND_URL+'?action=blessings&t='+Date.now()).then(function(r){ return r.json(); }).then(function(data){ renderBlessings((data&&data.blessings)||[]); setSync('blessingSyncDot','blessingSyncText',true,'Loaded from Google Form ✓'); }).catch(function(){ blessingLoading.style.display='none'; blessingEmpty.classList.remove('hidden'); blessingEmpty.textContent='Could not load blessings. Please refresh.'; setSync('blessingSyncDot','blessingSyncText',false,'Could not load blessings'); }); }
+  function loadBlessings(){ blessingLoading.style.display='block'; blessingLoading.textContent='Loading blessings...'; fetch(GOOGLE_BACKEND_URL+'?action=blessings&t='+Date.now()).then(function(r){ return r.json(); }).then(function(data){ renderBlessings((data&&data.blessings)||[]); ; }).catch(function(){ blessingLoading.style.display='none'; blessingEmpty.classList.remove('hidden'); blessingEmpty.textContent='Could not load blessings. Please refresh.'; setSync('blessingSyncDot','blessingSyncText',false,'Could not load blessings'); }); }
   loadBlessings();
   var blessPrev=document.getElementById('blessPrevBtn'), blessNext=document.getElementById('blessNextBtn');
   function blessScroll(dir){ if(!blessWrap) return; var card=blessWrap.querySelector('.blessing-card'); var w=card?card.offsetWidth+14:314; blessWrap.scrollBy({left:dir*w,behavior:'smooth'}); }
